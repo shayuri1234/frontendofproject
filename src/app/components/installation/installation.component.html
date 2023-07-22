@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>installation Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   
+  </head>
+  <body>
+    <div class="testbox">
+      <form (ngSubmit)="onSubmit()">
+        <h1>installation  Form</h1>
+        <div class="item">
+          <p> Name</p>
+          <input type="text" name="id" required [(ngModel)]="install.name"/>
+        </div>
+        <div class="item">
+          <p> Address</p>
+          <input type="text" name="name" placeholder="address" 
+          required [(ngModel)]="install.address"/>
+          <div class="city-item">
+            <input type="text" name="name" placeholder="City" 
+            required [(ngModel)]="install.city"/>
+            <input type="text" name="name" placeholder="mobile no" 
+            required [(ngModel)]="install.mobile"/>
+            <input type="text" name="name" placeholder="pincode" 
+            required [(ngModel)]="install.pincode"/>
+            <select required [(ngModel)]="install.service">
+              <option value="" >service</option>
+              <option value="1">cleaning</option>
+              <option value="2">reparing</option>
+              <option value="3">installation</option>
+              
+            </select>
+          </div>
+        </div>
+        
+        <div class="btn-block">
+          <button type="submit" href="/">submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
